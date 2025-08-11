@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Review = () => {
   return (
-    <div className="review" id="review">
+    <div className="review-content" id="review">
       <img src="review.png" className="review-img" alt="" />
       <Title
         spanText="قالوا عنا"

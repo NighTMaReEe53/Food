@@ -29,6 +29,9 @@
     background-color: var(--mainColor);
     border-radius: 50%;
     filter: blur(150px);
+    @media (max-width: 772px) {
+      display: none;
+    }
   }
   .container {
     display: flex;

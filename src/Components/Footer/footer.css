@@ -39,6 +39,7 @@
       color: var(--whiteColor);
       border-top: 1px solid #ccc3;
       flex-direction: row;
+      margin-top: 15px;
       gap: 0px;
       span {
         color: var(--mainColor);

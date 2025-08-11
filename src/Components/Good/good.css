@@ -14,6 +14,9 @@
     height: 200px;
     border-radius: 50%;
     filter: blur(250px);
+    @media(max-width:772px) {
+      display: none;
+    }
   }
   .shape-7 {
     position: absolute;
