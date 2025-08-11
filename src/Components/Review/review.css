@@ -64,3 +64,10 @@
     }
   }
 }
+
+@media(max-width:772px) {
+  .review-content::before {
+    display: none !important;
+  }
+}
+

@@ -113,3 +113,9 @@
     }
   }
 }
+
+@media(max-width:772px) {
+  .food::before {
+    display: none !important;
+  }
+}
