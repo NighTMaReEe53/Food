@@ -1,7 +1,7 @@
 .food {
   padding: var(--padding) 0px;
   position: relative;
-  @media(max-width:772px) {
+  @media (max-width: 772px) {
     overflow-x: hidden;
   }
   .shape-1 {
@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     width: 300px;
-    @media(max-width:992px) {
+    @media (max-width: 992px) {
       width: 100%;
     }
     object-fit: cover;
@@ -37,10 +37,11 @@
     gap: 15px;
     .box {
       flex-basis: 32%;
-      @media(min-width:772px) and (max-width:992px) {
+      font-family: "Open Sans", sans-serif;
+      @media (min-width: 772px) and (max-width: 992px) {
         flex-basis: 48%;
       }
-      @media(max-width:772px) {
+      @media (max-width: 772px) {
         flex-basis: 100%;
         width: 100%;
       }
@@ -84,13 +85,16 @@
         height: 200px;
       }
       .text {
+        > * {
+          margin-bottom: 15px;
+        }
         h2 {
           font-weight: bold;
-          font-size: 20px;
+          font-size: 18px;
           text-transform: capitalize;
         }
         p {
-          font-size: 15px;
+          font-size: 14px;
           line-height: 2;
           color: var(--textColor);
         }
