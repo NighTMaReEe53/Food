@@ -149,18 +149,8 @@
   }
 }
 
-.landing {
-  &::before {
-    @media (max-width: 772px) {
-      width: 350px !important;
-      height: 350px !important;
-    }
-  }
-}
-
 @media (max-width: 772px) {
   .landing::before {
-    width: 350px;
-    height: 350px;
+    display: none !important;
   }
 }

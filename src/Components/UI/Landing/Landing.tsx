@@ -33,7 +33,7 @@ const Landing = () => {
                 alt="chef"
               />
               <br />
-              الأول في فلسطين
+              للوجبات السريعة
             </motion.h2>
             <motion.p
               initial={{ x: 100, opacity: 0 }}
