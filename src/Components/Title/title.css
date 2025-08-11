@@ -1,0 +1,45 @@
+.main-title {
+  width: fit-content;
+  margin: 0 auto 30px;
+  text-align: center;
+  > * {
+    margin-bottom: 10px;
+  }
+  span {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    font-size: 30px;
+    color: var(--SecondaryColor);
+  }
+  h2 {
+    font-size: 50px;
+    @media (max-width: 772px) {
+      font-size: 40px;
+    }
+    color: var(--blakColor);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      border-width: 15px;
+      border-style: solid;
+      border-color: transparent var(--mainColor) transparent transparent;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -30px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-width: 15px;
+      border-style: solid;
+      border-color: transparent transparent transparent var(--mainColor);
+      top: 50%;
+      transform: translateY(-50%);
+      left: -30px;
+    }
+  }
+  p {
+    color: var(--textColor);
+    font-size: 15px;
+  }
+}

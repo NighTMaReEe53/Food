@@ -1,0 +1,98 @@
+.footer {
+  background-color: var(--blackColor);
+  padding: 15px 0px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+    &:nth-child(2) {
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      color: var(--whiteColor);
+      border-top: 1px solid #ccc3;
+      flex-direction: row;
+      gap: 0px;
+      span {
+        color: var(--mainColor);
+        font-weight: bold;
+        margin-right: 10px;
+        svg {
+          top: 6px;
+          position: relative;
+          margin-right: 5px;
+        }
+      }
+    }
+    .text {
+      @media (max-width: 992px) {
+        h2 {
+          justify-content: center;
+        }
+      }
+      h2 {
+        color: var(--whiteColor);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "IBM Plex Sans Arabic", sans-serif;
+        font-size: 35px;
+      }
+      p {
+        color: #f2f2f2;
+        margin-top: 10px;
+      }
+    }
+    .image {
+      img {
+        width: 250px;
+      }
+    }
+    .contact {
+      h2 {
+        font-weight: bold;
+        color: var(--whiteColor);
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        color: var(--whiteColor);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: #111111;
+        cursor: pointer;
+        transition: var(--trans);
+        opacity: 0.7;
+        &:hover {
+          transform: translateY(-10px);
+          opacity: 1;
+        }
+        &:nth-child(1):hover {
+          background-color: #0866ff;
+        }
+        &:nth-child(2):hover {
+          background-color: #ff03bc;
+        }
+        &:nth-child(3):hover {
+          background-color: #2cdb4e;
+        }
+        &:nth-child(4):hover {
+          background-color: #32abe7;
+        }
+      }
+    }
+  }
+}

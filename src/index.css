@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --whiteColor: #fff;
+  --trans: 0.5s;
+  --mainColor: #ef633e;
+  --blackColor: #030303;
+  --SecondaryColor: #5dc4b8;
+  --textColor: #434343;
+  --padding: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+&::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+&::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  box-shadow: 0 0 30px 30px var(--mainColor);
+  border-radius: 50%;
+}
+
+&::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+}
+
+body {
+  font-family: "Amiri", serif;
+  background-color: var(--whiteColor);
+
+  direction: rtl;
+  color: var(--blackColor);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Main Button */
+.main-btn {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: var(--whiteColor);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--mainColor);
+  transition: all 0.2s ease;
+  font-size: 17px;
+  letter-spacing: 1.2px;
+}
+
+.main-btn:active {
+  transform: scale(0.96);
+}
+
+.main-btn:before,
+.main-btn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.main-btn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(
+      circle,
+      var(--mainColor) 20%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle,
+      transparent 20%,
+      var(--mainColor) 20%,
+      transparent 30%
+    ),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(
+      circle,
+      transparent 10%,
+      var(--mainColor) 15%,
+      transparent 20%
+    ),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.main-btn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(
+      circle,
+      var(--mainColor) 20%,
+      transparent 20%
+    ),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(
+      circle,
+      transparent 10%,
+      var(--mainColor) 15%,
+      transparent 20%
+    ),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%),
+    radial-gradient(circle, var(--mainColor) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.secondary-btn {
+  padding: 10px 25px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid var(--SecondaryColor);
+  border-radius: 6px;
+  color: var(--blackColor);
+  cursor: pointer;
+  transition: var(--trans);
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    background-color: var(--SecondaryColor);
+    width: 100%;
+    height: 100%;
+    transition: var(--trans);
+    z-index: -1;
+  }
+  &:hover {
+    color: var(--whiteColor);
+    &::before {
+      left: 0%;
+    }
+  }
+}
+
+/* End Main Button */
